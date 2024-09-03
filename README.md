@@ -6,8 +6,8 @@ Projeto desenvolvido para a frente de dados do GTHC, a ideia é utilizar um mode
 
 Pretendo realizar as seguintes melhorias no projeto:
 - **Organização do Código**: Refatorar o código para melhorar a estrutura e a legibilidade, uma vez que é a primeira vez que trabalho com algumas das tecnologias utilizadas.
-- **Utilização do Modelo RandomForest**: De acordo com pesquisas, o modelo de Machine Learning RandomForest é mais preciso para análise de fraudes, e planejo implementá-lo no futuro.
-- **Deploy do Projeto**: Publicar o projeto em um site, facilitando o acesso e utilização.
+- **Utilização do Modelo RandomForest**: Apos pesquisas, notei que o modelo de ML RandomForest é muito usado para análise de fraudes, e planejo implementá-lo no futuro.
+- **Deploy do Projeto**: Upar o projeto em um site, facilitando o acesso e utilização.
 - **Migração para PostgreSQL**: Substituir o uso do arquivo CSV por PostgreSQL, com o qual pretendo me familiarizar melhor.
 - **Salvar o Modelo em uma Pipeline do Sklearn**: Criar uma pipeline para melhorar o processamento do DataFrame durante o treinamento do modelo. Ainda não consegui criar uma pipeline corretamente, o que impactou o feature engineering do projeto.
 
@@ -44,7 +44,7 @@ Dataset Utilizado disponivel no Kaggle
 
 5. Na interface, você pode copiar três exemplos de transações bancárias em string no modelo CSV(separados por vírgulas (dado1,dado2,dado3,...)).
 
-6. Ao enviar os dados, a API processará as informações e retornará um score entre 0 e 1000. Quanto maior o score, maior a probabilidade de a transação ser fraudulenta.
+6. Ao colar e enviar os dados, a API processará as informações e retornará um score entre 0 e 1000. Quanto maior o score, maior a probabilidade de a transação ser fraudulenta.
 
 ## Modelagem e Predição
 Colunas do treinamento: Index(['Hour', 'amt', 'amt_city_pop_ratio', 'amt_distance_ratio',
