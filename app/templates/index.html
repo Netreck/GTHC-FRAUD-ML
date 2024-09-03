@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Web</title>
+    <style>
+
+
+
+
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 40%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        
+        }
+        .copy-block {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+        .copy-block p {
+    margin: 10px 0;
+}
+
+        .copy-text {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+        .copy-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+        .copy-btn:hover {
+    background-color: #0056b3;
+}
+
+        .copy-btn:active {
+    background-color: #003d7a;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Preencha a Transação:</h1>
+        <form method="post">
+            <input type="text" name="url" placeholder="Insira a Transação aqui">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="copy-block">
+        <p>
+            <span class="copy-text">Transação Teste 1</span>
+            <button class="copy-btn" data-clipboard-text="671,4383,2019-01-03 18:07:01,4922710831011201.0,fraud_Pouros-Conroy,shopping_pos,711.66,Heather,Chase,F,6888 Hicks Stream Suite 954,Manor,PA,15665,40.3359,-79.6607,1472,Public affairs consultant,1941-03-07,d8daaffedc75c3e9228351ffac06aca9,1325614021,41.207335,-78.84093299999999">Copiar</button>
+        </p>
+        <p>
+            <span class="copy-text">Transação Teste 2</span>
+            <button class="copy-btn" data-clipboard-text="12000,78939,2019-02-16 16:21:40,372520049757633.0,fraud_Swift PLC,kids_pets,76.42,Lori,Ramirez,F,4293 Ramirez Squares,Ranier,MN,56668,48.6031,-93.2977,136,Ceramics designer,2000-02-20,6cbfc9f2e6da0249d393fa5a6d5206a1,1329409300,49.486845,-93.046677">Copiar</button>
+        </p>
+        <p>
+            <span class="copy-text">Transação Teste 3</span>
+            <button class="copy-btn" data-clipboard-text="363,2472,2019-01-02 01:47:29,340187018810220.0,fraud_Jenkins, Hauck and Friesen,gas_transport,11.52,Misty,Hart,F,27954 Hall Mill Suite 575,San Antonio,TX,78208,29.44,-98.459,1595797,Horticultural consultant,1960-10-28,bc7d41c41103877b03232f03f1f8d3f5,1325468849,29.819364,-99.142791">Copiar</button>
+        </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    
+    <script>
+        var clipboard = new ClipboardJS('.copy-btn');
+        clipboard.on('success', function(e) {
+            e.trigger.textContent = 'Copiado!';
+            setTimeout(function() {
+                e.trigger.textContent = 'Copiar';
+            }, 2000);
+        });
+        clipboard.on('error', function(e) {
+            e.trigger.textContent = 'Erro!';
+        });
+    </script>
+</body>
+</html>
